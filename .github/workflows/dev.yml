@@ -24,8 +24,10 @@ jobs:
           sudo apt-get install -y awscli
 
       - name: Install CDK
-        run: npm install -g aws-cdk
-        
+        run: |
+          npm install -g aws-cdk
+          npm install
+          
       - name: Run CDK Diff
         run: |
           cdk diff
